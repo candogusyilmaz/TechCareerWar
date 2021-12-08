@@ -1,17 +1,15 @@
-﻿
-using System;
+﻿using TechCareerWar.Core.Delegates;
+using TechCareerWar.Core.Enum;
+using TechCareerWar.Core.Logger.Abstract;
+using TechCareerWar.Core.Models.Game;
+using TechCareerWar.Core.Models.Game.Abstract;
 
-using TechCareerWar.Core.Abstract;
-using TechCareerWar.Delegates;
-using TechCareerWar.Enum;
-using TechCareerWar.Models.Game;
-using TechCareerWar.Models.Game.Abstract;
-
-namespace TechCareerWar.Core
+namespace TechCareerWar.Core.Abstract
 {
-    internal class Game
+    public abstract class GameBase
     {
         private Turn _turn;
+        private readonly ILogger _logger;
 
         /// <summary>
         /// Invoked when game lost.
@@ -31,6 +29,15 @@ namespace TechCareerWar.Core
         /// </summary>
         public event OnEnemyTurnHandler OnEnemyTurn;
 
+        /// <summary>
+        /// Invoked when player has usable weapons but hasn't equipped any.
+        /// </summary>
+        public event OnWeaponNotEquippedHandler OnPlayerWeaponNotEquipped;
+        /// <summary>
+        /// Invoked when player's equipped weapon is disabled.
+        /// </summary>
+        public event OnWeaponDisabledHandler OnPlayerWeaponDisabled;
+
         public Player Player { get; init; }
         public Enemy Enemy { get; private set; }
 
@@ -48,7 +55,7 @@ namespace TechCareerWar.Core
             }
         }
 
-        public Game(Player player, MapBase map)
+        public GameBase(Player player, MapBase map)
         {
             Player = player;
             Map = map;
@@ -58,11 +65,17 @@ namespace TechCareerWar.Core
             Player.OnMortalDied += PlayerDied;
         }
 
+        public GameBase(Player player, MapBase map, ILogger logger) : this(player, map)
+        {
+            _logger = logger;
+        }
+
         /// <summary>
         /// Starts the duel with <see cref="Player"/> turn.
         /// </summary>
         public void StartDuel()
         {
+            _logger?.Log("SYS: Duel started.");
             EnemySubscribe();
 
             Turn = Turn.Player;
@@ -70,53 +83,70 @@ namespace TechCareerWar.Core
 
         private void EnemyDamageRecevied(Mortal mortal)
         {
+            _logger?.Log($"SYS: Enemy took damage. HP: {mortal.HP}");
+
             if (mortal.IsAlive)
-            {
                 Turn = Turn.Enemy;
-            }
         }
 
         private void EnemyDied(Mortal mortal)
         {
-            Console.WriteLine("SYS: Enemy died, duel won.");
+            _logger?.Log("SYS: Enemy died, duel won.");
             EnemyUnsubscribe();
 
             if (Map.AliveEnemyCount > 0)
-            {
                 StartDuel();
-            }
             else
             {
-                Console.WriteLine("SYS: There is no alive enemy left. Player won.");
+                _logger?.Log("SYS: There is no alive enemy left. Player won.");
                 GameWon?.Invoke(Player);
             }
         }
 
         private void PlayerTurn()
         {
-            Console.WriteLine("SYS: Turn changes to Player.");
+            _logger?.Log("SYS: Turn changes to Player.");
 
             if (Player.Inventory.HasUsableWeapon)
             {
+                if (Player.EquippedWeapon == null)
+                {
+                    _logger?.Log("SYS: Player has no equipped weapon. Equip a weapon.");
+                    OnPlayerWeaponNotEquipped?.Invoke(Player);
+                }
+
+                if (Player.EquippedWeapon != null && Player.EquippedWeapon.Usable is false)
+                {
+                    _logger?.Log("SYS: Player's equipped weapon is disabled. Choose a new one.");
+                    OnPlayerWeaponDisabled?.Invoke(Player, Player.EquippedWeapon);
+                }
+                else
+                {
+                    _logger?.Log("SYS: Player has no weapon. Player loses.");
+                    Player.ReceiveDamage(Player.HP);
+                    return;
+                }
+
                 OnPlayerTurn?.Invoke(Player);
+                Player.ExecuteAction();
             }
             else
             {
-                Console.WriteLine("SYS: Player has no usable weapon.");
+                _logger?.Log("SYS: Player has no usable weapon.");
                 Player.ReceiveDamage(Player.HP);
             }
         }
 
         private void PlayerAttack(int damage)
         {
-            Console.WriteLine($"SYS: Player attacked with {damage} damage. Enemy HP: {Enemy.HP}.");
+            _logger?.Log($"SYS: Player attacked with {damage} damage.");
 
             Enemy.ReceiveDamage(damage);
         }
 
         private void EnemyTurn()
         {
-            Console.WriteLine("SYS: Turn changes to Enemy.");
+            _logger?.Log("SYS: Turn changes to Enemy.");
 
             if (Enemy.EquippedWeapon.Usable)
             {
@@ -125,29 +155,28 @@ namespace TechCareerWar.Core
             }
             else
             {
-                Console.WriteLine("SYS: Enemy has no usable weapon.");
+                _logger?.Log("SYS: Enemy has no usable weapon.");
                 Enemy.ReceiveDamage(Enemy.HP);
             }
         }
 
         private void EnemyAttack(int damage)
         {
-            Console.WriteLine($"SYS: Enemy attacked {damage} damage. Player HP: {Player.HP}.");
+            _logger?.Log($"SYS: Enemy attacked with {damage} damage.");
 
             Player.ReceiveDamage(damage);
         }
 
         private void PlayerDamageRecevied(Mortal mortal)
         {
+            _logger?.Log($"SYS: Player took damage. HP: {mortal.HP}");
             if (Player.IsAlive)
-            {
                 Turn = Turn.Player;
-            }
         }
 
         private void PlayerDied(Mortal mortal)
         {
-            Console.WriteLine("SYS: Player died, game lost.");
+            _logger?.Log("SYS: Player died, game lost.");
 
             EnemyUnsubscribe();
             PlayerUnsubscribe();

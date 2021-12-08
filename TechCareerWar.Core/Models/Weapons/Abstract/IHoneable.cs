@@ -1,6 +1,6 @@
 ﻿namespace TechCareerWar.Core.Models.Weapons.Abstract
 {
-    internal interface IHoneable
+    public interface IHoneable
     {
         bool IsHoned { get; }
         void Hone();

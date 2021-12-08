@@ -6,8 +6,8 @@ namespace TechCareerWar.Core.Models.Game.Abstract
 {
     public abstract class Mortal
     {
-        public event OnMortalDiedHandler OnMortalDied;
-        public event OnReceiveDamageHandler OnDamageReceived;
+        internal event OnMortalDiedHandler OnMortalDied;
+        internal event OnReceiveDamageHandler OnDamageReceived;
 
         public int HP { get; private set; }
         public bool IsAlive => HP > 0;
@@ -42,7 +42,7 @@ namespace TechCareerWar.Core.Models.Game.Abstract
         /// Exception will be thrown if used while dead.
         /// </summary>
         /// <exception cref="Exceptions.ActionWhileDead"></exception>
-        public void ExecuteAction()
+        internal void ExecuteAction()
         {
             if (IsAlive == false)
                 throw new Exception(Exceptions.ActionWhileDead);
