@@ -1,10 +1,9 @@
 ﻿using System;
 
-using TechCareerWar.Core.Models.Game;
-using TechCareerWar.Core.Services;
 using TechCareerWar.Core;
-using TechCareerWar.Core.Models.Weapons;
+using TechCareerWar.Core.Models.Game;
 using TechCareerWar.Core.Models.Weapons.Abstract;
+using TechCareerWar.Core.Services;
 
 namespace TechCareerWar.ConsoleApp
 {

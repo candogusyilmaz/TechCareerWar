@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TechCareerWar.Core.Abstract.GameBase" Collapsed="true">
+    <Position X="10.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAjAAFBABAgiAAQAKAAAAIAAAABABAAEAAQAgACg=</HashCode>
+      <FileName>Abstract\GameBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechCareerWar.Core.Abstract.MapBase" Collapsed="true">
+    <Position X="8.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAQAAFAAAAAAAABQAAEEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Abstract\MapBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechCareerWar.Core.Models.Ammos.CoreAmmo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Ammos\CoreAmmo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TechCareerWar.Core.Models.Ammos.RocketAmmo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Ammos\RocketAmmo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TechCareerWar.Core.Models.Ammos.ShellAmmo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Ammos\ShellAmmo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TechCareerWar.Core.Models.Ammos.TopAmmo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Ammos\TopAmmo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TechCareerWar.Core.Models.Game.Abstract.Mortal" Collapsed="true">
+    <Position X="0.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAgAQAAAAAAAIAAAQAAAAAAAAAAAABAAAAQ=</HashCode>
+      <FileName>Models\Game\Abstract\Mortal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechCareerWar.Core.Models.Game.Enemy" Collapsed="true">
+    <Position X="0.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Models\Game\Enemy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TechCareerWar.Core.Models.Game.Player" Collapsed="true">
+    <Position X="3.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAACAAAAgAAQAAAAAAAAAAAAAAgAAAAQ=</HashCode>
+      <FileName>Models\Game\Player.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TechCareerWar.Core.Models.Weapons.Abstract.Melee" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Weapons\Abstract\Melee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechCareerWar.Core.Models.Weapons.Abstract.Ranged&lt;AmmoType&gt;" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAEAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Weapons\Abstract\Ranged.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechCareerWar.Core.Models.Weapons.Abstract.ScopedRanged&lt;AmmoType&gt;" Collapsed="true">
+    <Position X="5.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Weapons\Abstract\ScopedRanged.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechCareerWar.Core.Models.Weapons.Abstract.Weapon" Collapsed="true">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAgAAAAAAAAAAAAAAAEAAABAAgAAAABAAA=</HashCode>
+      <FileName>Models\Weapons\Abstract\Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechCareerWar.Core.Models.Weapons.Knife" Collapsed="true">
+    <Position X="0.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAEAAAAAAAAAAAAAAAAAQEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Weapons\Knife.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TechCareerWar.Core.Models.Weapons.Pistol" Collapsed="true">
+    <Position X="3" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Weapons\Pistol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechCareerWar.Core.Models.Weapons.Rifle" Collapsed="true">
+    <Position X="3.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Weapons\Rifle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechCareerWar.Core.Models.Weapons.RocketLauncher" Collapsed="true">
+    <Position X="5.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Weapons\RocketLauncher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechCareerWar.Core.Models.Weapons.Shotgun" Collapsed="true">
+    <Position X="7" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Weapons\Shotgun.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechCareerWar.Core.Models.Weapons.Top" Collapsed="true">
+    <Position X="7.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Weapons\Top.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechCareerWar.Core.Services.EnemyStore" Collapsed="true">
+    <Position X="12" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Services\EnemyStore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechCareerWar.Core.Services.WeaponStore" Collapsed="true">
+    <Position X="10.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAACAAAAAAAQAAAAAAAAAAEAAAAAAAAAAABA=</HashCode>
+      <FileName>Services\WeaponStore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechCareerWar.Core.Utilities.Inventory" Collapsed="true">
+    <Position X="5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAABAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAABA=</HashCode>
+      <FileName>Utilities\Inventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechCareerWar.Core.Exceptions" Collapsed="true">
+    <Position X="14.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIBAAAgAAQAAEAAAABQIEAAAAAAAACBAIAAABAQDAAA=</HashCode>
+      <FileName>Exceptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechCareerWar.Core.Game">
+    <Position X="10.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Game.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TechCareerWar.Core.Map" Collapsed="true">
+    <Position X="8.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Map.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="TechCareerWar.Core.Logger.Abstract.ILogger" Collapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logger\Abstract\ILogger.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TechCareerWar.Core.Models.Ammos.Abstract.IAmmo" Collapsed="true">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Ammos\Abstract\IAmmo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TechCareerWar.Core.Models.Game.Abstract.IAttackable" Collapsed="true">
+    <Position X="0.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Game\Abstract\IAttackable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TechCareerWar.Core.Models.Weapons.Abstract.IHoneable" Collapsed="true">
+    <Position X="0.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Weapons\Abstract\IHoneable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="TechCareerWar.Core.Enum.Turn" Collapsed="true">
+    <Position X="12.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Enum\Turn.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="TechCareerWar.Core.Delegates.OnAttackHandler" Collapsed="true">
+    <Position X="0.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Delegates\OnAttackHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="TechCareerWar.Core.Delegates.OnEnemyTurnHandler" Collapsed="true">
+    <Position X="16" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Delegates\OnEnemyTurnHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="TechCareerWar.Core.Delegates.OnExecuteActionHandler" Collapsed="true">
+    <Position X="4.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Delegates\OnExecuteActionHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="TechCareerWar.Core.Delegates.OnGameEndHandler" Collapsed="true">
+    <Position X="12.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Delegates\OnGameEndHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="TechCareerWar.Core.Delegates.OnMortalDiedHandler" Collapsed="true">
+    <Position X="6" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Delegates\OnMortalDiedHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="TechCareerWar.Core.Delegates.OnPlayerTurnHandler" Collapsed="true">
+    <Position X="14.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Delegates\OnPlayerTurnHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="TechCareerWar.Core.Delegates.OnReceiveDamageHandler" Collapsed="true">
+    <Position X="2.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Delegates\OnReceiveDamageHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="TechCareerWar.Core.Delegates.OnWeaponDisabledHandler" Collapsed="true">
+    <Position X="12.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Delegates\OnWeaponDisabledHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="TechCareerWar.Core.Delegates.OnWeaponNotEquippedHandler" Collapsed="true">
+    <Position X="12.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Delegates\OnWeaponNotEquippedHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

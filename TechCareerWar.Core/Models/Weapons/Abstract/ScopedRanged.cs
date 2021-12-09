@@ -6,12 +6,12 @@
         {
         }
 
-        public void ZoomIn()
+        public virtual void ZoomIn()
         {
 
         }
 
-        public void ZoomOut()
+        public virtual void ZoomOut()
         {
 
         }

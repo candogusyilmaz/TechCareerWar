@@ -5,4 +5,10 @@
         bool IsHoned { get; }
         void Hone();
     }
+
+    public interface CopyOfIHoneable
+    {
+        bool IsHoned { get; }
+        void Hone();
+    }
 }

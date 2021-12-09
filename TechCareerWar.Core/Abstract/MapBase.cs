@@ -2,6 +2,7 @@
 using System.Linq;
 
 using TechCareerWar.Core.Models.Game;
+using TechCareerWar.Core.Models.Game.Abstract;
 using TechCareerWar.Core.Services;
 
 namespace TechCareerWar.Core.Abstract

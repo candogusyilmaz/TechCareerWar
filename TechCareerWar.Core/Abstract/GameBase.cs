@@ -194,6 +194,7 @@ namespace TechCareerWar.Core.Abstract
 
         private void EnemyUnsubscribe()
         {
+            if(Enemy is IAttackable e) {}
             Enemy.OnAttack -= EnemyAttack;
             Enemy.OnDamageReceived -= EnemyDamageRecevied;
             Enemy.OnMortalDied -= EnemyDied;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 using TechCareerWar.Core.Models.Game;
+using TechCareerWar.Core.Models.Game.Abstract;
 using TechCareerWar.Core.Models.Weapons.Abstract;
 
 namespace TechCareerWar.Core.Services
@@ -30,7 +31,6 @@ namespace TechCareerWar.Core.Services
 
             return CreateEnemies(randomEnemyCount);
         }
-
 
         /// <summary>
         /// Creates and returns enemies based on <paramref name="count"/>.

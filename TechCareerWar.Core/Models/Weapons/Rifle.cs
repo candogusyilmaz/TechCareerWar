@@ -9,7 +9,7 @@ namespace TechCareerWar.Core.Models.Weapons
     {
         private readonly int _shootsBulletsAs;
 
-        public Rifle(Rifle rifle) : this(rifle.Brand, rifle.Model, rifle.Description, rifle.Power, rifle.Magazine.Capacity)
+        public Rifle(Rifle rifle) : this(rifle.Brand, rifle.Model, rifle.Description, rifle.Power, rifle.Magazine.Capacity, rifle._shootsBulletsAs)
         {
 
         }
