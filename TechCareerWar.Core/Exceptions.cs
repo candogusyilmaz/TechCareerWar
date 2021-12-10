@@ -17,6 +17,7 @@
         public const string KnifeNotHoned = "Weapon is not honed.";
         public const string MapNameTooLong = "Map name can't be more than 15 characters long.";
         public const string FaultyEnemyCount = "Enemy count must be between 3 and 8.";
+        public const string EnemyCountZero = "Enemy count can't be 0.";
         public const string OutOfBullets = "Out of bullets.";
     }
 }

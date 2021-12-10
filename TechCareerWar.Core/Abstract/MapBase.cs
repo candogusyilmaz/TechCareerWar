@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 using TechCareerWar.Core.Models.Game;
-using TechCareerWar.Core.Models.Game.Abstract;
 using TechCareerWar.Core.Services;
 
 namespace TechCareerWar.Core.Abstract
@@ -29,6 +29,9 @@ namespace TechCareerWar.Core.Abstract
         public MapBase(string mapName, int enemyCount)
         {
             _enemyStore = new EnemyStore();
+
+            if (enemyCount <= 0)
+                throw new ArgumentException(Exceptions.EnemyCountZero);
 
             Name = mapName;
             EnemyCount = enemyCount;

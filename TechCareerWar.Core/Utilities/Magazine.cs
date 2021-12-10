@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
 
+using TechCareerWar.Core.Models.Ammos.Abstract;
+
 namespace TechCareerWar.Core.Utilities
 {
-    public record Magazine<Type> where Type : new()
+    public class Magazine<Type> where Type : IAmmo, new()
     {
         public int AmmoCount => _ammos.Count;
 

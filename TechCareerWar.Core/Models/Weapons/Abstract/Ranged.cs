@@ -1,10 +1,11 @@
 ﻿using System;
 
+using TechCareerWar.Core.Models.Ammos.Abstract;
 using TechCareerWar.Core.Utilities;
 
 namespace TechCareerWar.Core.Models.Weapons.Abstract
 {
-    public abstract class Ranged<AmmoType> : Weapon where AmmoType : new()
+    public abstract class Ranged<AmmoType> : Weapon where AmmoType : IAmmo, new()
     {
         public Magazine<AmmoType> Magazine { get; init; }
 

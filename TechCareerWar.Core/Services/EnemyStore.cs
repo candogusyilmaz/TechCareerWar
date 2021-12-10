@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 
 using TechCareerWar.Core.Models.Game;
-using TechCareerWar.Core.Models.Game.Abstract;
 using TechCareerWar.Core.Models.Weapons.Abstract;
 
 namespace TechCareerWar.Core.Services
